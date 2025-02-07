@@ -71,6 +71,7 @@ h1 {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    display: none; /* Hide the button by default */
 }
 
 form {

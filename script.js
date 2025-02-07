@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for each subject card
     subjectCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Make the "Add File" button visible when a subject is clicked
-            addFileBtn.removeAttribute('hidden');
+            // Show the "Add File" button when a subject is clicked
+            addFileBtn.style.display = 'block';
         });
     });
 });
-
 function addFileToSubject(fileData) {
     const subjectFiles = document.getElementById(`${fileData.subject.toLowerCase()}Files`);
     if (!subjectFiles) return;
