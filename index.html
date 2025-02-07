@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Digital Works</h1>
+        <button id="addFileBtn">+ Add File</button>
+    </header>
+
+    <div class="subjects-grid" id="subjectsContainer">
+        <!-- Subjects will be added here dynamically -->
+    </div>
+
+    <!-- Add File Modal -->
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Upload New File</h2>
+            <form id="fileForm">
+                <input type="text" id="fileName" placeholder="File Name" required>
+                <select id="fileType" required>
+                    <option value="">Select File Type</option>
+                    <option value="doc">Document</option>
+                    <option value="ppt">Presentation</option>
+                    <option value="xls">Spreadsheet</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" id="fileSubject" placeholder="Subject" required>
+                <input type="date" id="fileDate" required>
+                <input type="file" id="fileUpload" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
