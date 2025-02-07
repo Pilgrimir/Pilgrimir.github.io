@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Portfolio</title>
+    <title>Subject Files</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>My Digital Works</h1>
+        <h1 id="subjectTitle">Subject Files</h1>
         <button id="addFileBtn">+ Add File</button>
     </header>
 
-    <div class="subjects-grid" id="subjectsContainer">
-        <a href="subject.html?subject=Math" class="subject-card">
-            <h3>Math</h3>
-            <p>View files</p>
-        </a>
-        <a href="subject.html?subject=Science" class="subject-card">
-            <h3>Science</h3>
-            <p>View files</p>
-        </a>
-        <a href="subject.html?subject=History" class="subject-card">
-            <h3>History</h3>
-            <p>View files</p>
-        </a>
+    <div class="file-list" id="fileList">
+        <!-- Files will be dynamically added here -->
     </div>
 
     <!-- Add File Modal -->
@@ -41,7 +30,6 @@
                     <option value="xls">Spreadsheet</option>
                     <option value="other">Other</option>
                 </select>
-                <input type="text" id="fileSubject" placeholder="Subject" required>
                 <input type="date" id="fileDate" required>
                 <input type="file" id="fileUpload" required>
                 <button type="submit">Upload</button>
@@ -49,6 +37,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="subjects.js"></script>
 </body>
 </html>
