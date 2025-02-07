@@ -16,10 +16,10 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    background-color: #4caf50; /* Green background */
-    color: white; /* White font color */
     padding: 10px 20px; /* Optional padding for spacing */
+    border-bottom: 2px solid black; /* Black line at the bottom */
 }
+
 
 h1 {
     color: var(--primary-color);
