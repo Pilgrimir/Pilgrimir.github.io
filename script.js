@@ -1,6 +1,17 @@
-// Keep only the DOMContentLoaded event listener if needed
 document.addEventListener('DOMContentLoaded', () => {
-    // Any initialization code for the homepage
+    // Select all subject cards
+    const subjectCards = document.querySelectorAll('.subject-card');
+    
+    // Select the "Add File" button
+    const addFileBtn = document.getElementById('addFileBtn');
+
+    // Event listener for each subject card
+    subjectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Make the "Add File" button visible when a subject is clicked
+            addFileBtn.removeAttribute('hidden');
+        });
+    });
 });
 
 function addFileToSubject(fileData) {
