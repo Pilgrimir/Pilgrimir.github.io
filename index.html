@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Portfolio</title>
+    <title>Schoolwork Organizer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>My Digital Works</h1>
+        <h1>Schoolwork Organizer</h1>
         <button id="addFileBtn" hidden>+ Add File</button>
     </header>
 
     <div class="subjects-grid" id="subjectsContainer">
         <a href="subject.html?subject=Math" class="subject-card">
             <h3>Math</h3>
-            <p>View files</p>
         </a>
         <a href="subject.html?subject=Science" class="subject-card">
             <h3>Science</h3>
-            <p>View files</p>
         </a>
         <a href="subject.html?subject=History" class="subject-card">
             <h3>History</h3>
-            <p>View files</p>
-        </a>
+        </a>        
     </div>
 
     <!-- Add File Modal -->
     <div id="fileModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Upload New File</h2>
-            <form id="fileForm">
-                <input type="text" id="fileName" placeholder="File Name" required>
-                <select id="fileType" required>
-                    <option value="">Select File Type</option>
-                    <option value="doc">Document</option>
-                    <option value="ppt">Presentation</option>
-                    <option value="xls">Spreadsheet</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="text" id="fileSubject" placeholder="Subject" required>
-                <input type="date" id="fileDate" required>
-                <input type="file" id="fileUpload" required>
-                <button type="submit">Upload</button>
+        <span class="close">&times;</span>
+        
+        <!-- Step 1: File Upload Section -->
+        <div id="uploadStep">
+            <h2>Select a File to Upload</h2>
+            <input type="file" id="fileUploadInput" required>
+            <button id="uploadFileBtn">Upload File</button>
+        </div>
+        
+        <!-- Step 2: File Details Section (Hidden Initially) -->
+        <div id="detailsStep" style="display: none;">
+            <h2>Enter File Details</h2>
+            <form id="fileDetailsForm">
+            <input type="text" id="fileName" placeholder="File Name" required>
+            <select id="fileType" required>
+                <option value="">Select File Type</option>
+                <option value="doc">Document</option>
+                <option value="ppt">Presentation</option>
+                <option value="xls">Spreadsheet</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="date" id="fileDate" required>
+            <button type="submit">Submit Details</button>
             </form>
         </div>
+        </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
